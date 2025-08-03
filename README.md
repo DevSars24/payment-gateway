@@ -14,28 +14,28 @@ This is a secure and production-ready backend for handling online payments using
 
 ---
 
-## 📁 Project Structure
-
-
-/server
+payment-gateway/
+├── server/
+│   ├── config/
+│   │   └── config.env                # Environment variables (PORT, Mongo URI, Razorpay keys)
+│   │
+│   ├── controllers/
+│   │   └── paymentController.js      # Handles Razorpay logic (create order, verify payment)
+│   │
+│   ├── models/
+│   │   └── paymentModel.js           # Mongoose schema for payment records
+│   │
+│   ├── routes/
+│   │   └── paymentRoutes.js          # API routes for payment (checkout, verify, getkey)
+│   │
+│   ├── app.js                        # Express app setup and middleware
+│   ├── server.js                     # App entry point: connects DB and starts server
+│   ├── database.js                   # MongoDB connection setup using mongoose
+│   └── README.md                     # 📘 Project documentation (this file)
 │
-├── controllers/ # Handles business logic
-│ └── paymentController.js
-│
-├── models/ # MongoDB models
-│ └── paymentModel.js
-│
-├── routes/ # Express route definitions
-│ └── paymentRoutes.js
-│
-├── config/ # Environment config
-│ └── config.env
-│
-├── database.js # MongoDB connection logic
-├── app.js # Express app setup
-├── server.js # Entry point
-└── README.md # This file
-
+├── .gitignore                        # Ignores node_modules, config.env, etc.
+├── package.json                      # Project metadata and scripts
+└── package-lock.json                 # Dependency lockfile
 
 
 ---
