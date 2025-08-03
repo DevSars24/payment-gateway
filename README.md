@@ -108,9 +108,8 @@ Never expose your Razorpay secret key on the frontend
 📸 Frontend Integration
 Easily integrate with any frontend using Razorpay Checkout:
 
-js
-Copy
-Edit
+
+
 const options = {
   key: "YOUR_KEY_ID", // From /getkey route
   amount: order.amount,
